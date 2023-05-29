@@ -9,13 +9,18 @@ M.disabled = {
     ["<C-a>"] = "",
     ["<C-c>"] = "",
     ["<C-v>"] = "",
+    ["<C-BS>"] = "",
   },
 }
 
 map("n", ">", ">>")
 map("n", "<", "<<")
+
 map("n", "0", "^")
 map("n", "-", "$")
+
+map("n", "H", "^")
+map("n", "L", "$")
 -- redo
 map("n", "U", "<C-r>")
 
@@ -37,6 +42,6 @@ M.general = {
   },
 }
 
--- more keybinds!
+-- more keybiknds!
 
 return M

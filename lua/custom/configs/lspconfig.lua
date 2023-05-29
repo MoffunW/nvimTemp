@@ -4,9 +4,11 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require "lspconfig"
 local lspZero = require "lsp-zero"
 
-lspZero.preset "recommended"
+lspZero.preset "minimal"
 lspZero.on_attach(function(client, bufnr)
-  lspZero.default_keymaps { buffer = bufnr }
+  lspZero.default_keymaps {
+    buffer = bufnr,
+  }
 end)
 
 lspZero.format_on_save {

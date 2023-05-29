@@ -39,8 +39,8 @@ M.general = {
     -- also don't use g[j|k] when in operator pending mode, so it doesn't alter d, y or c behaviour
     ["j"] = { 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', "Move down", opts = { expr = true } },
     ["k"] = { 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', "Move up", opts = { expr = true } },
-    ["J"] = { "5j", "Move down", opts = { expr = true } },
-    ["K"] = { "5k", "Move down", opts = { expr = true } },
+    ["J"] = { "5j", "Move down", opts = { override = true } },
+    ["K"] = { "5k", "Move down" },
 
     ["<Up>"] = { 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', "Move up", opts = { expr = true } },
     ["<Down>"] = { 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', "Move down", opts = { expr = true } },
@@ -121,7 +121,7 @@ M.comment = {
 M.lspconfig = {
   plugin = true,
 
-  -- See `<cmd> :help vim.lsp.*` for documentation on any of the below functions
+  -- See `<cmd> :help vim.lsp.*` for documentation on any of the below functionsmapp
 
   n = {
     ["gD"] = {
@@ -138,12 +138,12 @@ M.lspconfig = {
       "LSP definition",
     },
 
-    -- ["gh"] = {
-    --   function()
-    --     vim.lsp.buf.hover()
-    --   end,
-    --   "LSP hover",
-    -- },
+    ["gh"] = {
+      function()
+        vim.lsp.buf.hover()
+      end,
+      "LSP hover",
+    },
 
     ["gi"] = {
       function()

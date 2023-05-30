@@ -4,8 +4,12 @@ M.treesitter = {
   ensure_installed = {
     "vim",
     "lua",
+    "vue",
     "javascript",
     "typescript",
+    "scss",
+    "css",
+    "html",
     --"tsx",
     "c",
     "markdown",
@@ -28,7 +32,8 @@ M.mason = {
     -- web dev stuff
     "typescript-language-server",
     "prettier",
-    "vue-language-server",
+    -- "vue-language-server",
+    "css-lsp",
 
     -- c/cpp stuff
     "clangd",

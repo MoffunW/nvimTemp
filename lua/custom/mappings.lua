@@ -23,6 +23,7 @@ map("n", "H", "^")
 map("n", "L", "$")
 -- redo
 map("n", "U", "<C-r>")
+map("n", "<C-z>", "u")
 
 map("n", "<C-c>", '"y')
 map("n", "<C-v>", '"p')
@@ -37,6 +38,7 @@ M.general = {
     ["J"] = { "5j", "down 5 lines", opts = { nowait = true } },
     ["K"] = { "5k", "up 5 lines", opts = { remap = true, nowait = true, silent = true } },
     ["<C-p>"] = { "<leader>ff", "Find files", opts = { remap = true, nowait = true, silent = true } },
+    ["<C/>"] = { "<leader>/", "Comment", opts = { remap = true, nowait = true, silent = true } },
   },
   i = {
     ["jk"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },

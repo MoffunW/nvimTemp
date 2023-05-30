@@ -1,16 +1,16 @@
 local options = {
   ensure_installed = {
-    "lua-language-server",
+    -- "lua-language-server",
   }, -- not an option from mason.nvim
---    "clangd",
---    "css-lsp cssls",
---  "deno",
---"html-lsp",
---  "lua-language-server",
--- "prettier",
---"stylua",
---"typescript-language-server",
--- "vue-language-server"
+  --    "clangd",
+  --    "css-lsp cssls",
+  --  "deno",
+  --"html-lsp",
+  --  "lua-language-server",
+  -- "prettier",
+  --"stylua",
+  --"typescript-language-server",
+  -- "vue-language-server"
 
   PATH = "skip",
 

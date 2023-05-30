@@ -21,18 +21,18 @@ lspZero.format_on_save {
     -- if you have a working setup with null-ls
     -- you can specify filetypes it can format.
 
-    ["tsserver"] = { "vue", "javascript", "typescript" },
+    ["tsserver"] = { "javascript", "typescript" },
     ["volar"] = { "vue" },
-    ["prettier"] = { "html", "vue", "javascript", "typescript" },
-    ["emmet_ls"] = { "html" },
-    ["cssls"] = { "css" },
+    -- ["prettier"] = { "html", "vue", "javascript", "typescript" },
+    ["emmet_ls"] = { "vue", "html", "css", "scss" },
+    ["cssls"] = { "vue", "css" },
   },
 }
 
 lspZero.setup()
 
 -- if you just want default config for the servers then put them in a table
-local servers = { "tsserver", "clangd" }
+local servers = { "volar", "tsserver", "clangd", "cssls" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {

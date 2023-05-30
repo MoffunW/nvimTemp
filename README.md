@@ -484,7 +484,7 @@ nvim .config/powershell/user_profile.ps1
 [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
 
 Import-Module posh-git
-oh-my-posh init pwsh --config 'C:/Users/moffu/.config/powershell/moffun.omp.json' | Invoke-Expression
+oh-my-posh init pwsh --config 'C:/Users/UserName/.config/powershell/UserName.omp.json' | Invoke-Expression
 
 Import-Module -Name Terminal-Icons
 
@@ -526,7 +526,7 @@ nvim $PROFILE.CurrentUserCurrentHost
 
 ```
 . $env:USERPROFILE\.config\powershell\user_profile.ps1
-oh-my-posh init pwsh --config ~\.config\powershell\moffun.omp.json | Invoke-Expression
+oh-my-posh init pwsh --config ~\.config\powershell\UserName.omp.json | Invoke-Expression
 ```
 
 ### Install posh-git

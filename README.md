@@ -512,7 +512,7 @@ function which ($command) {
 }
 ```
 
-#Configure powershell
+# Configure powershell
 
 ```PowerShell
 nvim $PROFILE.CurrentUserCurrentHost

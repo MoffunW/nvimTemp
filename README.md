@@ -16,6 +16,10 @@
   "$schema": "https://aka.ms/terminal-profiles-schema",
   "actions": [
     {
+      "keys": "ctrl+backspace",
+      "command": { "action": "sendInput", "input": "\u0017" }
+    },
+    {
       "command": {
         "action": "switchToTab",
         "index": 1
@@ -700,13 +704,4 @@ winget install -e --id Git.Git
 ```PowerShell
 scoop install nvm
 nvm install 14.16.0
-```
-
-### Paste this in your windows terminal settings.json in actions block for be able to use <Ctrl-BS> to be able to kill word backwards
-
-```json
-{
-  "keys": "ctrl+backspace",
-  "command": { "action": "sendInput", "input": "\u0017" }
-},
 ```

@@ -475,7 +475,7 @@ nvim .config/powershell/user_profile.ps1
 
 #### Paste this in user_profle.ps1
 
-```
+```PowerShell
 # set PowerShell to UTF-8
 [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
 
@@ -659,7 +659,7 @@ nvim .config/powershell/username.omp.json
     }
   ],
   "osc99": true
-}
+}/
 ```
 
 ### Install Terminal-Icons

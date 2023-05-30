@@ -36,6 +36,7 @@ M.general = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
     ["J"] = { "5j", "down 5 lines", opts = { nowait = true } },
     ["K"] = { "5k", "up 5 lines", opts = { remap = true, nowait = true, silent = true } },
+    ["<C-p>"] = { "<leader>ff", "Find files", opts = { remap = true, nowait = true, silent = true } },
   },
   i = {
     ["jk"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },

@@ -470,7 +470,7 @@ scoop install curl sudo jq gcc neovim fd ripgrep fzf llvm
 git clone https://github.com/MoffunW/nvimTemp.git $HOME\AppData\Local\nvim --depth 1 && nvim
 ```
 
-### C:\Users\UserName
+### in ~ (C:\Users\UserName) create .config/powershell dir, then create config for user
 
 ```PowerShell
 mkdir .config/powershell
@@ -522,7 +522,7 @@ function which ($command) {
 nvim $PROFILE.CurrentUserCurrentHost
 ```
 
-### Paste it in $PROFILE.CurrentUserCurrentHost
+### Connect previous created user_profile.ps1 config and oh-my-posh config to powershell - Paste it in $PROFILE.CurrentUserCurrentHost
 
 ```
 . $env:USERPROFILE\.config\powershell\user_profile.ps1

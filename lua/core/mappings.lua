@@ -13,6 +13,7 @@ M.general = {
     ["<C-l>"] = { "<Right>", "Move right" },
     ["<C-j>"] = { "<Down>", "Move down" },
     ["<C-k>"] = { "<Up>", "Move up" },
+    ["<C-s>"] = { "<cmd> w <CR>", "Save file" },
   },
 
   n = {
@@ -57,6 +58,7 @@ M.general = {
   v = {
     ["<Up>"] = { 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', "Move up", opts = { expr = true } },
     ["<Down>"] = { 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', "Move down", opts = { expr = true } },
+    ["<C-s>"] = { "<cmd> w <CR>", "Save file" },
   },
 
   x = {

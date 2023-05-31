@@ -1,15 +1,14 @@
+# Nvcad (neovim) frontend config
+
 # Installation from zero on windows
 
 ## Install windows terminal depend on your system
-
 [Github releases](https://github.com/microsoft/terminal/releases)
 
 ## Install powershell
-
 [Microsoft installing powershell](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.3#msi)
 
 ## PowerShell configuration i've got
-
 ```json
 {
   "$help": "https://aka.ms/terminal-documentation",
@@ -460,8 +459,15 @@
 }
 ```
 
-## Install neovim, compiler and other things (fd & ripgrep are needed for correct telecope work)
+## Install Nerd-Font
+[https://github.com/ryanoasis/nerd-fonts/releases](https://github.com/ryanoasis/nerd-fonts/releases)
+I'm using Hack Nerd-Font, choose any, but make sure the nerd font you set doesnt end with Mono to prevent small icons
 
+### Unpack somewhere and select all fonts files and right-click > Install for all users
+Then go to windows terminal > settings > defaults > appearance > font face
+Find your nerd font and select it
+
+## Install neovim, compiler and other things (fd & ripgrep are needed for correct telecope work)
 ```PowerShell
 scoop install curl sudo jq gcc neovim fd ripgrep fzf llvm
 ```
@@ -471,14 +477,12 @@ git clone https://github.com/MoffunW/nvimTemp.git $HOME\AppData\Local\nvim --dep
 ```
 
 ### in ~ (C:\Users\UserName) create .config/powershell dir, then create config for user
-
 ```PowerShell
 mkdir .config/powershell
 nvim .config/powershell/user_profile.ps1
 ```
 
 #### Paste this in user_profle.ps1
-
 ```PowerShell
 # set PowerShell to UTF-8
 [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
@@ -517,38 +521,32 @@ function which ($command) {
 ```
 
 # Configure powershell
-
 ```PowerShell
 nvim $PROFILE.CurrentUserCurrentHost
 ```
 
 ### Connect previous created user_profile.ps1 config and oh-my-posh config to powershell - Paste it in $PROFILE.CurrentUserCurrentHost
-
 ```
 . $env:USERPROFILE\.config\powershell\user_profile.ps1
 oh-my-posh init pwsh --config ~\.config\powershell\UserName.omp.json | Invoke-Expression
 ```
 
 ### Install posh-git
-
 ```PowerShell
 Install-Module posh-git -Scope CurrentUser -Force
 ```
 
 ### Install oh-my-posh
-
 ```PowerShell
 winget install JanDeDobbeleer.OhMyPosh -s winget
 ```
 
 ### create oh-my-posh config file
-
 ```PowerShell
 nvim .config/powershell/username.omp.json
 ```
 
 #### Paste following in username.omp.json for terminal appearance
-
 ```json
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
@@ -667,19 +665,16 @@ nvim .config/powershell/username.omp.json
 ```
 
 ### Install Terminal-Icons
-
 ```PowerShell
 Install-Module -Name Terminal-Icons -Repository PSGallery -Force
 ```
 
 ### Install z
-
 ```PowerShell
 Install-Module -Name z -Force
 ```
 
 # Install and configure PSRealLine
-
 ```PowerShell
 Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
 Set-PSReadLineOption -PredictionSource History
@@ -687,21 +682,26 @@ Set-PSReadLineOption -PredictionViewStyle ListView
 ```
 
 # Install and configure PSFzf
-
 ```PowerShell
 Install-Module -Name PSFzf -Scope CurrentUser -Force
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
 ```
 
 ## Install git
-
 ```PowerShell
 winget install -e --id Git.Git
 ```
 
 ## Install node.js
-
 ```PowerShell
 scoop install nvm
 nvm install 14.16.0
 ```
+
+## Keep going
+[https://nvchad.com/ docs](https://nvchad.com/docs/config/walkthrough)
+[https://neovim.io/doc/user/](https://neovim.io/doc/user/)
+
+### Inspiration
+[https://www.youtube.com/c/devaslife](https://www.youtube.com/c/devaslife)
+[https://github.com/craftzdog/dotfiles-public](https://github.com/craftzdog/dotfiles-public)

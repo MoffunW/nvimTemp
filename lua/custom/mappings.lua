@@ -45,6 +45,7 @@ M.general = {
     -- Indent
     ["<A-j>"] = { ":m+<CR>", "Move lines down", opts = { remap = true, nowait = true, silent = true } },
     ["<A-k>"] = { ":m-2<CR>", "Move lines up", opts = { remap = true, nowait = true, silent = true } },
+    ["<A-x>"] = { ":BufOnly<CR>", "Close other buffers", opts = { remap = true, silent = true } },
   },
   i = {
     ["jk"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },

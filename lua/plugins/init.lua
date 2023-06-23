@@ -93,6 +93,27 @@ local default_plugins = {
 
   -- git stuff
   {
+    "NvChad/ui",
+    branch = "v2.0",
+    lazy = false,
+    config = function()
+      require "nvchad_ui"
+    end,
+  },
+
+  {
+    "TimUntersberger/neogit",
+    cmd = "Neogit",
+    dependencies = "nvim-lua/plenary.nvim",
+    opts = function()
+      return require("plugins.configs.others").neogit
+    end,
+    config = function(_, opts)
+      require("neogit").setup(opts)
+    end,
+  },
+
+  {
     "lewis6991/gitsigns.nvim",
     ft = { "gitcommit", "diff" },
     init = function()

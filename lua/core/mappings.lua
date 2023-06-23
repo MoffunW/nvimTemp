@@ -282,6 +282,7 @@ M.telescope = {
 
     -- git
     ["<leader>gc"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
+    ["<leader>gb"] = { "<cmd> Telescope git_branches <CR>", "Git branches" },
     ["<leader>gs"] = { "<cmd> Telescope git_status <CR>", "Git status" },
     ["<leader>gf"] = { "<cmd> Telescope git_files <CR>", "Git files" },
 
@@ -409,7 +410,7 @@ M.gitsigns = {
 
   n = {
     -- Navigation through hunks
-    ["]c"] = {
+    ["gn"] = {
       function()
         if vim.wo.diff then
           return "]c"
@@ -423,7 +424,7 @@ M.gitsigns = {
       opts = { expr = true },
     },
 
-    ["[c"] = {
+    ["gN"] = {
       function()
         if vim.wo.diff then
           return "[c"
@@ -452,12 +453,12 @@ M.gitsigns = {
       "Preview hunk",
     },
 
-    ["<leader>gb"] = {
-      function()
-        package.loaded.gitsigns.blame_line()
-      end,
-      "Blame line",
-    },
+    -- ["<leader>gb"] = {
+    --   function()
+    --     package.loaded.gitsigns.blame_line()
+    --   end,
+    --   "Blame line",
+    -- },
 
     ["<leader>td"] = {
       function()

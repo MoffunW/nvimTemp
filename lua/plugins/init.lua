@@ -93,18 +93,21 @@ local default_plugins = {
 
   -- git stuff
   {
-    "NvChad/ui",
-    branch = "v2.0",
-    lazy = false,
-    config = function()
-      require "nvchad_ui"
-    end,
-  },
-
-  {
     "TimUntersberger/neogit",
     cmd = "Neogit",
-    dependencies = "nvim-lua/plenary.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      {
+        cmd = "Diffview",
+        "sindrets/diffview.nvim",
+        opts = function()
+          return require("plugins.configs.others").diffview
+        end,
+        config = function(_, opts)
+          require("diffview").setup(opts)
+        end,
+      },
+    },
     opts = function()
       return require("plugins.configs.others").neogit
     end,

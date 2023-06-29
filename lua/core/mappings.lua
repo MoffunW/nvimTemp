@@ -122,7 +122,7 @@ M.comment = {
 
   v = {
     ["<C-_>"] = {
-      "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
+      "<ESC><cmd>lua require('Comment.api').toggle.blockwise(vim.fn.visualmode())<CR>",
       "Toggle comment",
     },
   },

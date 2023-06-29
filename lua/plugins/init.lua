@@ -35,6 +35,7 @@ local default_plugins = {
     end,
   },
 
+  -- Appearance
   {
     "NvChad/nvim-colorizer.lua",
     init = function()
@@ -70,6 +71,14 @@ local default_plugins = {
       return require("plugins.configs.others").blankline
     end,
     config = function(_, opts)
+      vim.opt.termguicolors = true
+      vim.cmd [[highlight IndentBlanklineIndent1 guifg=#325a5e gui=nocombine]]
+      vim.cmd [[highlight IndentBlanklineIndent2 guifg=#325a5e gui=nocombine]]
+      vim.cmd [[highlight IndentBlanklineIndent3 guifg=#324b7b gui=nocombine]]
+      vim.cmd [[highlight IndentBlanklineIndent4 guifg=#216631 gui=nocombine]]
+      vim.cmd [[highlight IndentBlanklineIndent5 guifg=#563921 gui=nocombine]]
+      vim.cmd [[highlight IndentBlanklineIndent6 guifg=#662121 gui=nocombine]]
+      vim.cmd [[highlight IndentBlanklineIndent7 guifg=#562155 gui=nocombine]]
       require("core.utils").load_mappings "blankline"
       dofile(vim.g.base46_cache .. "blankline")
       require("indent_blankline").setup(opts)

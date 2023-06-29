@@ -15,6 +15,17 @@ M.blankline = {
     "nvcheatsheet",
     "",
   },
+  space_char_blankline = " ",
+  char_highlight_list = {
+    "IndentBlanklineIndent1",
+    "IndentBlanklineIndent2",
+    "IndentBlanklineIndent3",
+    "IndentBlanklineIndent4",
+    "IndentBlanklineIndent5",
+    "IndentBlanklineIndent6",
+    "IndentBlanklineIndent7",
+  },
+
   buftype_exclude = { "terminal" },
   show_trailing_blankline_indent = false,
   show_first_indent_level = false,
@@ -48,7 +59,15 @@ M.luasnip = function(opts)
     end,
   })
 end
-
+--
+-- M.indentblankline = {
+--   -- How transparent should the rainbow colors be. 1 is completely opaque, 0 is invisible. 0.07 by default
+--   color_transparency = 0.15,
+--   -- The 24-bit colors to mix with the background. Specified in hex.
+--   -- { 0xffff40, 0x79ff79, 0xff79ff, 0x4fecec, } by default
+--   colors = { 0xff0000, 0x00ff00, 0x0000ff },
+-- }
+--
 M.gitsigns = {
   signs = {
     add = { hl = "DiffAdd", text = "│", numhl = "GitSignsAddNr" },
